@@ -15,53 +15,68 @@
             Product Register
         </header>
         <div class="mb-5 px-5">
-            <section class="p-5">
+            <form class="p-5 needs-validation">
                 <div class="h2 text-light-emphasis">
                     Product Registering
                 </div>
 
-                <div class="row py-2 align-items-center fs-4" style="width: 80%; margin: auto;">
+                <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
                     <div class="col-2">
                         <label for="inputName" class="form-label">Name:</label>
                     </div>
                     <div class="col-10">
-                        <input type="text" id="inputName" class="form-control">
+                        <input type="text" id="inputName" class="form-control" required>
                     </div>
                 </div>
 
-                <div class="row py-2 align-items-center fs-4" style="width: 80%; margin: auto;">
+                <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
                     <div class="col-2">
                         <label for="inputDescription" class="form-label">Short description:</label>
                     </div>
                     <div class="col-10">
-                        <input type="text" id="inputDescription" class="form-control">
+                        <input type="text" id="inputDescription" class="form-control" required>
                     </div>
                 </div>
 
-                <div class="row py-2 align-items-center fs-4" style="width: 80%; margin: auto;">
+                <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
                     <div class="col-2">
                         <label for="inputPrice" class="form-label">Price:</label>
                     </div>
                     <div class="col-4">
-                        <input type="number" min="0" id="inputPrice" class="form-control">
+                        <input type="number" min="0" id="inputPrice" class="form-control" required>
                     </div>
                     <div class="col-2">
                         <label for="inputType" class="form-label">Type:</label>
                     </div>
                     <div class="col-4">
-                        <input type="text" id="inputType" class="form-control">
+                        <select class="form-select">
+                            <option value="1">Own production</option>
+                            <option value="2">National</option>
+                            <option value="3">Imported</option>
+                        </select>
                     </div>
                 </div>
                 
-                <div class="row py-2 align-items-center fs-4" style="width: 80%; margin: auto;">
+                <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
                     <div class="col-2">
-                        <label for="inputName" class="form-label">Others:</label>
+                        <label for="inputLabels" class="form-label">Labels:</label>
                     </div>
                     <div class="col-10">
-                        
+                        <div id="inputLabels">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="launchCheck">
+                                <label for="launchCheck">Launch</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="saleCheck">
+                                <label for="launchCheck">Sale</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+
+                <button class="btn btn-primary fs-5 d-grid mt-3 mx-auto px-5" type="submit">Submit</button>
+            </form>
 
             <section class="p-5">
                 <div class="h2 text-light-emphasis">
@@ -86,7 +101,7 @@
     </div>
 
     <div class="bg-secondary text-white text-center p-4">
-        Projeto desenvolvido por Pedro H. Silva
+        Project developed by Pedro H. Silva
         <br>
         2025
     </div>
