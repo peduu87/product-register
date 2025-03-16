@@ -46,10 +46,11 @@
                         <input type="number" min="0" id="inputPrice" class="form-control" required>
                     </div>
                     <div class="col-2">
-                        <label for="inputType" class="form-label">Type:</label>
+                        <label for="inputOrigin" class="form-label">Origin:</label>
                     </div>
                     <div class="col-4">
-                        <select class="form-select">
+                        <select class="form-select" id="inputOrigin">
+                            <option selected disabled value="">Choose</option>
                             <option value="1">Own production</option>
                             <option value="2">National</option>
                             <option value="3">Imported</option>
@@ -82,6 +83,7 @@
                 <div class="h2 text-light-emphasis">
                     Registered products
                 </div>
+
             </section>
         </div>
 
