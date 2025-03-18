@@ -42,10 +42,12 @@ const origins = new Map([
     [3, "Imported"],
 ]);
 
-// Gets the table to show the data.
-const tableBody = document.getElementById("tableBody");
-
 function loadTable() {
+    // Gets the table to show the data.
+    const tableBody = document.getElementById("tableBody");
+
+    tableBody.innerHTML = "";
+
     for (let i = 0; i < regProducts.length; i++) {
         let labelHtml = "";
         
@@ -95,14 +97,53 @@ function validateForm() {
     return isFormValid;
 }
 
+function getProdLabels() {
+    const checkboxes = document.getElementsByClassName("origin-check");
+    let prodLabels = [];
+
+    for (let checkbox of checkboxes) {
+        if (checkbox.checked == true) {
+            prodLabels.push(checkbox.value);
+        }
+    }
+
+    return prodLabels;
+}
+
+function clearForm() {
+    document.getElementById("inputName").value = "";
+    document.getElementById("inputDesc").value = "";
+    document.getElementById("inputPrice").value = "";
+    let stdOptions = document.getElementsByClassName("std-option");
+    
+    for (let option of stdOptions) {
+        option.selected = 'selected';
+    }
+
+    const checkboxes = document.getElementsByClassName("origin-check");
+
+    for (let checkbox of checkboxes) {
+        checkbox.checked = false;
+    }
+}
+
 function submitForm(){
     if (!validateForm()) {
-        console.log("NO")
+        
         return;
     }
-    else {
-        console.log(parseFloat(document.getElementById("inputPrice").value))
-    }
+
+    regProducts.push({
+        name: document.getElementById("inputName").value,
+        desc: document.getElementById("inputDesc").value,
+        price: parseFloat(document.getElementById("inputPrice").value),
+        originCode: parseInt(document.getElementById("inputOrigin").value),
+        labels: getProdLabels(),
+    });
+
+    loadTable()
+
+    clearForm();
 
     return;
 }

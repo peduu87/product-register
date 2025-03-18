@@ -31,10 +31,10 @@
 
                 <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
                     <div class="col-2">
-                        <label for="inputDescription" class="form-label">Short description:</label>
+                        <label for="inputDesc" class="form-label">Short description:</label>
                     </div>
                     <div class="col-10">
-                        <input type="text" maxlength="45" id="inputDescription" class="form-control" required>
+                        <input type="text" maxlength="45" id="inputDesc" class="form-control" required>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-4">
                         <select class="form-select" id="inputOrigin">
-                            <option selected disabled value="">Choose</option>
+                            <option class="std-option" selected disabled value="">Choose</option>
                             <option value="1">Own production</option>
                             <option value="2">National</option>
                             <option value="3">Imported</option>
@@ -66,19 +66,19 @@
                     <div class="col-10">
                         <div id="inputLabels">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="l" id="launchCheck">
+                                <input class="form-check-input origin-check" type="checkbox" value="l" id="launchCheck">
                                 <label for="launchCheck">Launch</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="s" id="saleCheck">
+                                <input class="form-check-input origin-check" type="checkbox" value="s" id="saleCheck">
                                 <label for="saleCheck">Sale</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="u" id="lastUnitsCheck">
+                                <input class="form-check-input origin-check" type="checkbox" value="u" id="lastUnitsCheck">
                                 <label for="lastUnitsCheck">Last Units</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="o" id="outOfStockCheck">
+                                <input class="form-check-input origin-check" type="checkbox" value="o" id="outOfStockCheck">
                                 <label for="outOfStockCheck">Out Of Stock</label>
                             </div>
                         </div>
