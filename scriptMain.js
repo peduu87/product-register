@@ -60,10 +60,10 @@ function loadTable() {
         tableBody.innerHTML +=
         `<th scope="row">${i + 1}</th>
         <td>${regProducts[i].name}</td>
-        <td>${regProducts[i].desc}</td>
+        <td class="d-none d-lg-block">${regProducts[i].desc}</td>
         <td>${currencyFormatter.format(regProducts[i].price)}</td>
         <td>${origins.get(regProducts[i].originCode)}</td>
-        <td>${labelHtml.trim()}</td>`;
+        <td class="d-none d-lg-block">${labelHtml.trim()}</td>`;
     }    
 }
 

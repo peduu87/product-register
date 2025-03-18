@@ -14,42 +14,42 @@
         <header class="display-4 text-center text-primary p-4 pt-3 bg-white">
             Product Register
         </header>
-        <div class="mb-5 px-5">
-            <form class="p-5">
+        <div class="mb-5 px-3 px-lg-5">
+            <form class="py-4 p-lg-5">
                 <div class="h2 text-light-emphasis">
                     Product Registering
                 </div>
 
                 <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                         <label for="inputName" class="form-label">Name:</label>
                     </div>
-                    <div class="col-10">
+                    <div class="col-12 col-lg-10">
                         <input type="text" maxlength="30" id="inputName" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                         <label for="inputDesc" class="form-label">Short description:</label>
                     </div>
-                    <div class="col-10">
+                    <div class="col-12 col-lg-10">
                         <input type="text" maxlength="45" id="inputDesc" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                         <label for="inputPrice" class="form-label">Price:</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <input type="number" min="0" max="999999.99" step="1" maxlength="8" id="inputPrice"
                             class="form-control money" onkeypress="return event.keyCode === 8 || event.charCode === 46 || (event.charCode >= 48 && event.charCode <= 57)" required>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                         <label for="inputOrigin" class="form-label">Origin:</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <select class="form-select" id="inputOrigin">
                             <option class="std-option" selected disabled value="">Choose</option>
                             <option value="1">Own production</option>
@@ -60,10 +60,10 @@
                 </div>
 
                 <div class="row py-2 align-items-center fs-5" style="width: 80%; margin: auto;">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                         <label for="inputLabels" class="form-label">Labels:</label>
                     </div>
-                    <div class="col-10">
+                    <div class="col-12 col-lg-10">
                         <div id="inputLabels">
                             <div class="form-check">
                                 <input class="form-check-input origin-check" type="checkbox" value="l" id="launchCheck">
@@ -88,7 +88,7 @@
                 <button type="button" class="btn btn-primary fs-5 d-grid mt-3 mx-auto px-5" onclick="submitForm()">Submit</button>
             </form>
 
-            <section class="p-5">
+            <section class="py-4 p-lg-5">
                 <div class="h2 text-light-emphasis">
                     Registered products
                 </div>
@@ -101,10 +101,10 @@
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Name</th>
-                            <th scope="col">Description</th>
+                            <th scope="col" class="d-none d-lg-block">Description</th>
                             <th scope="col">Price</th>
                             <th scope="col">Origin</th>
-                            <th scope="col">Labels</th>
+                            <th scope="col" class="d-none d-lg-block">Labels</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
@@ -115,7 +115,7 @@
 
         <footer class="p-5 mt-5 bg-white">
             <div class="row">
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-5 mb-4">
                     <h1 class="text-primary">Thank you <span class="text-black">for using!</span></h1>
                 </div>
                 <div class="col-12 col-lg-7">
