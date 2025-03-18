@@ -15,7 +15,7 @@
             Product Register
         </header>
         <div class="mb-5 px-5">
-            <form class="p-5 needs-validation">
+            <form class="p-5">
                 <div class="h2 text-light-emphasis">
                     Product Registering
                 </div>
@@ -43,8 +43,8 @@
                         <label for="inputPrice" class="form-label">Price:</label>
                     </div>
                     <div class="col-4">
-                        <input type="number" min="0" max="999999.99" maxlength="8" id="inputPrice"
-                            class="form-control money" required>
+                        <input type="number" min="0" max="999999.99" step="1" maxlength="8" id="inputPrice"
+                            class="form-control money" onkeypress="return event.keyCode === 8 || event.charCode === 46 || (event.charCode >= 48 && event.charCode <= 57)" required>
                     </div>
                     <div class="col-2">
                         <label for="inputOrigin" class="form-label">Origin:</label>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary fs-5 d-grid mt-3 mx-auto px-5" type="submit">Submit</button>
+                <button type="button" class="btn btn-primary fs-5 d-grid mt-3 mx-auto px-5" onclick="submitForm()">Submit</button>
             </form>
 
             <section class="p-5">
